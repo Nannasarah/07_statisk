@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  align-self: stretch;
+  padding: 0rem;
+}
+.FashionRUs {
+  width: 20%;
+  padding: 20px;
+}
+main {
+  margin-inline: 50px;
+}
+.grid_3-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.categories {
+  display: grid;
+  gap: 20px;
+  margin: 10px;
+  padding: 20px;
+  color: white;
+  background-color: gray;
+  text-decoration: none;
+}
+
+.product_list_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 15px;
+}
+.box {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 4;
+  gap: 15px;
+  padding: 20px;
+  background-color: rgb(245, 245, 245);
+}
+.produkttitl {
+  font-weight: 700;
+  text-align: center;
+}
+.plb {
+  margin-inline: auto;
+  object-fit: contain;
+  height: 400px;
+}
+.bsoldo {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 5fr;
+}
+.soldout {
+  filter: grayscale(70%);
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+.bsoldo p {
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 1;
+  background-color: gray;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  padding-top: 25%;
+  border-radius: 10%;
+}
+@media screen and (max-width: 1000px) {
+  .product_list_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 15px;
+  }
+}
