@@ -18,6 +18,8 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
                 <p>${data.basecolour}</p>
                 <h2>Inventory number</h2>
                 <p>${data.id}</p>
+                    <h2>Price</h2>
+                <p>${data.id}</p>
             </div>
             <div>
                 <h1>${data.brandname}</h1>
