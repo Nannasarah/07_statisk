@@ -1,13 +1,14 @@
-let produktside = document.querySelector(".produktside");
-let productId = 1163;
+console.log("siden vises");
+const myproduct = new URLSearchParams(window.location.search).get("product");
+const produktside = document.querySelector(".produktside");
 
-fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
+fetch(`https://kea-alt-del.dk/t7/api/products/${myproduct}`)
   .then((response) => response.json())
   .then((data) => {
     console.log(data);
     produktside.innerHTML = `
         <div>
-            <img src=" https://kea-alt-del.dk/t7/images/webp/640/${productId}.webp" alt="tshirt">
+            <img src=" https://kea-alt-del.dk/t7/images/webp/640/${myproduct}.webp" alt="produkt">
         </div>
         <div class="produkt-info">
             <h1>Product Information</h1>
@@ -19,7 +20,7 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
                 <h2>Inventory number</h2>
                 <p>${data.id}</p>
                     <h2>Price</h2>
-                <p>${data.id}</p>
+                <p>${data.price},-</p>
             </div>
             <div>
                 <h1>${data.brandname}</h1>
